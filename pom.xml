@@ -23,6 +23,7 @@
 
     <modules>
         <module>demo-jooq-db</module>
+        <module>demo-jooq-api</module>
         <module>demo-jooq</module>
     </modules>
 

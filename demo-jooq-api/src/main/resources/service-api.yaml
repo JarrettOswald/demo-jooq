@@ -1,0 +1,56 @@
+openapi: 3.0.0
+
+info:
+  version: 0.0.1
+  title: Library Service
+  description: The library service
+
+tags:
+  - name: Library
+
+paths:
+  /library/books:
+    get:
+      summary: List all books
+      tags:
+        - Library
+      description: This is description
+      responses:
+        "200":
+          description: This means is ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Book'
+    post:
+      summary: Create book
+      tags:
+        - Library
+      description: This is description
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Book'
+      responses:
+        "200":
+          description: This means is ok
+          content:
+            text/plan:
+              schema:
+                type: string
+
+components:
+  schemas:
+    Book:
+      description: This is book model
+      type: object
+      properties:
+        name:
+          description: The name of book
+          type: string
+        bookAuthor:
+          description: The name of author
+          type: string
