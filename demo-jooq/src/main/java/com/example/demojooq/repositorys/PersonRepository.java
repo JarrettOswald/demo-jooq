@@ -1,12 +1,14 @@
 package com.example.demojooq.repositorys;
 
+import lombok.RequiredArgsConstructor;
 import org.jooq.DSLContext;
 import org.jooq.generated.tables.Persons;
 import org.jooq.generated.tables.records.PersonsRecord;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class PersonRepository {
+@RequiredArgsConstructor
+public class PersonRepository 
 
     private final DSLContext dsl;
 
